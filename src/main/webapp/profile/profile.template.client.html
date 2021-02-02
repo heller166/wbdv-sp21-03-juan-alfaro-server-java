@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>Profile</h1>
+    <div class="alert alert-success">
+        Profile successfully saved
+    </div>
+    <div>
+        <div class="form-group row">
+            <label for="usernameFld" class="col-sm-2 col-form-label">
+                Username </label>
+            <div class="col-sm-10">
+                <input class="form-control wbdv-field wbdv-usernameFld"
+                       id="usernameFld"
+                       placeholder="Alice"
+                       readonly>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="phoneFld" class="col-sm-2 col-form-label">
+                Phone </label>
+            <div class="col-sm-10">
+                <input type="tel"
+                       class="form-control wbdv-field wbdv-phoneFld"
+                       id="phoneFld"
+                       placeholder="999-999-9999">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="emailFld" class="col-sm-2 col-form-label">
+                Email </label>
+            <div class="col-sm-10">
+                <input type="email"
+                       class="form-control wbdv-field wbdv-emailFld"
+                       id="emailFld"
+                       placeholder="aliceiscool@coolalice.com">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="dobFld" class="col-sm-2 col-form-label">
+                Date of Birth </label>
+            <div class="col-sm-10">
+                <input type="date"
+                       class="form-control wbdv-field wbdv-dobFld"
+                       id="dobFld">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="roleFld" class="col-sm-2 col-form-label">
+                Role </label>
+            <div class="col-sm-10">
+                <select class="form-control wbdv-field wbdv-roleFld" id="roleFld">
+                    <option value="Faculty">Faculty</option>
+                    <option value="Student">Student</option>
+                    <option value="Admin">Administrator</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <a class="btn btn-success btn-block wbdv-UpdateBtn" href="">Update</a>
+                <a class="btn btn-danger btn-block wbdv-LogoutBtn" href="../index.html">Logout</a>
+                <!--
+                <button class="btn btn-success btn-block wbdv-UpdateBtn">Update</button>
+                <button class="btn btn-danger btn-block wbdv-LogoutBtn">Logout</button>
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
