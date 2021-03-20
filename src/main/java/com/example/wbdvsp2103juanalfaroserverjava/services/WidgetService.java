@@ -10,25 +10,6 @@ import java.util.List;
 @Service
 public class WidgetService {
     public List<Widget> widgets = new ArrayList<>();
-    {
-        Widget w1 = new Widget();
-        Widget w2 = new Widget();
-        Widget w3 = new Widget();
-        Widget w4 = new Widget();
-        Widget w5 = new Widget();
-
-        w1.setName("Hello1");
-        w2.setName("Hello2");
-        w3.setName("Hello3");
-        w4.setName("Hello4");
-        w5.setName("Hello5");
-
-        widgets.add(w1);
-        widgets.add(w2);
-        widgets.add(w3);
-        widgets.add(w4);
-        widgets.add(w5);
-    }
 
     public Widget createWidget(String topicId, Widget widget) {
         widget.setTopicId(topicId);
