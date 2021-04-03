@@ -1,38 +1,27 @@
 package com.example.wbdvsp2103juanalfaroserverjava.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-    private String src;
-    private String name;
-    private String type;
-    private String text;
-    private String style;
-    private String value;
-    private String cssClass;
-    private String id;
-    private Integer size;
-    private Integer widget;
-    private Integer height;
-    private Integer widgetOrder;
-    private String topicId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String src = "";
+    private String name = "";
+    private String type = "";
+    private String text = "";
+    private String style = "";
+    private String value = "";
+    private String topicId = "";
+    private String cssClass = "";
+    private Integer size = 0;
+    private Integer width = 0;
+    private Integer height = 0;
+    private Integer widgetOrder = 1;
+    private Boolean ordered = true;
 
-    public Widget(String src, String name, String type, String text, String style, String value, String cssClass,
-                  String id, Integer size, Integer widget, Integer height, Integer widgetOrder) {
-        this.src = src;
-        this.name = name;
-        this.type = type;
-        this.text = text;
-        this.style = style;
-        this.value = value;
-        this.cssClass = cssClass;
-        this.id = id;
-        this.size = size;
-        this.widget = widget;
-        this.height = height;
-        this.widgetOrder = widgetOrder;
-    }
-
-    public Widget() {
-    }
 
     public String getSrc() {
         return src;
@@ -62,7 +51,7 @@ public class Widget {
         return cssClass;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -70,8 +59,8 @@ public class Widget {
         return size;
     }
 
-    public Integer getWidget() {
-        return widget;
+    public Integer getWidth() {
+        return width;
     }
 
     public Integer getHeight() {
@@ -110,7 +99,7 @@ public class Widget {
         this.cssClass = cssClass;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -118,8 +107,8 @@ public class Widget {
         this.size = size;
     }
 
-    public void setWidget(Integer widget) {
-        this.widget = widget;
+    public void setWidth(Integer widget) {
+        this.width = widget;
     }
 
     public void setHeight(Integer height) {
@@ -136,5 +125,13 @@ public class Widget {
 
     public void setTopicId(String topidId) {
         this.topicId = topidId;
+    }
+
+    public Boolean getOrdered() {
+        return ordered;
+    }
+
+    public void setOrdered(Boolean ordered) {
+        this.ordered = ordered;
     }
 }
